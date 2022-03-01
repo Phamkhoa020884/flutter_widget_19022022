@@ -5,14 +5,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Widget",
-      theme: ThemeData(
-        primarySwatch: Colors.teal
-      ),
+      theme: ThemeData(primarySwatch: Colors.teal),
       home: MyHomePage(),
     );
   }
@@ -36,11 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
         constraints: BoxConstraints.expand(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children:[
-            Text("Viet A"),
-            Text("View B"),
-            Text("View C")
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(flex: 2, child: Container(color: Colors.red)),
+            Expanded(flex: 2, child: Container(color: Colors.green)),
+            Expanded(flex: 2, child: Container(color: Colors.blue)),
           ],
         ),
       ),
